@@ -1,6 +1,6 @@
 # DFAD
 
-This repository contains the code of paper: *Data-Free Adversarial Distillation*
+This repository contains the code for paper: *Data-Free Adversarial Distillation*
 
 ![seg_results](images/seg-results.png)
 
@@ -36,7 +36,7 @@ You can download **our pretrained models** from [OneDrive](https://1drv.ms/u/s!A
 
 ### 1. Prepare Datasets
 
-MNIST, CIFAR10 and CIFAR100 will be automatically downloaded by the training scripts.  
+Data for MNIST, CIFAR10 and CIFAR100 will be automatically downloaded by the training scripts.  
 Download other datasets from the following links and extract them to *./data*:
 
 #### Caltech101 
