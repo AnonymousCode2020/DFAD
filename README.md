@@ -60,11 +60,12 @@ Download other datasets from the following links and extract them to *./data*:
 
 ### 2. Train teachers and students
 
-Start the visdom server at port 15550 for visualization
-.
+Start the visdom server on port 15550 for visualization. You can visit [127.0.0.1:15550](127.0.0.1:15550) to check training logs.
+
 ```bash
 visdom -p 15550
 ```
+
 
 ### CIFAR
 
