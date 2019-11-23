@@ -2,6 +2,8 @@
 
 This repository contains the code of paper: *Data-Free Adversarial Distillation*
 
+![seg_results](images/seg-results.png)
+
 ## Requirements
 
 ```bash
@@ -29,7 +31,7 @@ python DFAD_mnist.py --ckpt checkpoint/teacher/mnist-lenet5.pt # --verbose
 ## Step by Step
 
 
-## 1. Prepare Datasets
+### 1. Prepare Datasets
 
 MNIST, CIFAR10 and CIFAR100 will be automatically downloaded by the training scripts.  
 Download other datasets from the following links and extract them to *./data*:
@@ -53,7 +55,7 @@ Download other datasets from the following links and extract them to *./data*:
 2. Download [labels](https://github.com/ankurhanda/nyuv2-meta-data) and extract it to *./data/NYUv2/nyuv2-meta-data*
 
 
-## 2. Train teachers and students
+### 2. Train teachers and students
 
 Start the visdom server at port 15550 for visualization
 .
