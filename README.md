@@ -12,7 +12,7 @@ pip install -r requirements.txt
 
 ## Quick Start: MNIST
 
-This is an MNIST example for DFAD, which only takes a few minutes for training. Data will be automatically downloaded by the python scripts.
+We provide an MNIST example for DFAD, which only takes a few minutes for training. Data will be automatically downloaded by the python scripts.
 
 ```bash
 bash run_mnist.sh
