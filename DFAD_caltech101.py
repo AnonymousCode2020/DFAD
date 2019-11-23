@@ -89,40 +89,35 @@ def main():
     parser.add_argument('--batch_size', type=int, default=64, metavar='N',
                         help='input batch size for training (default: 64)')
     parser.add_argument('--test_batch_size', type=int, default=32, metavar='N',
-                        help='input batch size for testing (default: 1000)')
+                        help='input batch size for testing (default: 32)')
     
     parser.add_argument('--epochs', type=int, default=300, metavar='N',
-                        help='number of epochs to train (default: 10)')
-    parser.add_argument('--epoch_itrs', type=int, default=50, 
-                        help='number of epochs to train (default: 10)')
+                        help='number of epochs to train (default: 300)')
+    parser.add_argument('--epoch_itrs', type=int, default=50)
     parser.add_argument('--lr_S', type=float, default=0.1, metavar='LR',
                         help='learning rate (default: 0.1)')
     parser.add_argument('--lr_G', type=float, default=1e-3,
-                        help='learning rate (default: 0.1)')
+                        help='learning rate (default: 1e-3)')
     parser.add_argument('--data_root', type=str, default='data')
 
     parser.add_argument('--dataset', type=str, default='caltech101', choices=['caltech101'],
-                        help='dataset name (default: mnist)')
+                        help='dataset name (default: caltech101)')
     parser.add_argument('--model', type=str, default='resnet18', choices=['resnet18'],
-                        help='dataset name (default: mnist)')
+                        help='model name (default: resnet18)')
     parser.add_argument('--weight_decay', type=float, default=5e-4)
     parser.add_argument('--momentum', type=float, default=0.9, metavar='M',
                         help='SGD momentum (default: 0.9)')
     parser.add_argument('--no-cuda', action='store_true', default=False,
                         help='disables CUDA training')
-    parser.add_argument('--seed', type=int, default=219, metavar='S',
-                        help='random seed (default: 219)')
-    parser.add_argument('--ckpt', type=str, default='checkpoint/teacher/caltech101-resnet34-128.pt')
+    parser.add_argument('--seed', type=int, default=1, metavar='S',
+                        help='random seed (default: 1)')
+    parser.add_argument('--ckpt', type=str, default='checkpoint/teacher/caltech101-resnet34.pt')
     parser.add_argument('--log-interval', type=int, default=10, metavar='N',
                         help='how many batches to wait before logging training status')
-    parser.add_argument('--nz', type=int, default=256,
-                        help='how many batches to wait before logging training status')
+    parser.add_argument('--nz', type=int, default=256)
     parser.add_argument('--test-only', action='store_true', default=False)
     parser.add_argument('--download', action='store_true', default=False)
-    parser.add_argument('--step_size', type=int, default=100, metavar='S',
-                        help='random seed (default: 1)')
-    parser.add_argument('--img_size', type=int, default=128, metavar='S',
-                        help='random seed (default: 1)')
+    parser.add_argument('--step_size', type=int, default=100, metavar='S')
     parser.add_argument('--scheduler', action='store_true', default=False)
     args = parser.parse_args()
     use_cuda = not args.no_cuda and torch.cuda.is_available()
@@ -139,7 +134,7 @@ def main():
     train_loader, test_loader = get_dataloader(args)
     teacher = torchvision.models.resnet34(num_classes=101)
     student = torchvision.models.resnet18(num_classes=101)
-    generator = network.gan.GeneratorB(nz=args.nz, nc=3, img_size=args.img_size)
+    generator = network.gan.GeneratorB(nz=args.nz, nc=3, img_size=128)
 
     teacher.load_state_dict( torch.load( args.ckpt ) )
 

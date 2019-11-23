@@ -109,12 +109,11 @@ def main():
     parser.add_argument('--batch_size', type=int, default=64, metavar='N',
                         help='input batch size for training (default: 64)')
     parser.add_argument('--test_batch_size', type=int, default=9, metavar='N',
-                        help='input batch size for testing (default: 1000)')
+                        help='input batch size for testing (default: 9)')
     
     parser.add_argument('--epochs', type=int, default=300, metavar='N',
-                        help='number of epochs to train (default: 10)')
-    parser.add_argument('--epoch_itrs', type=int, default=50, 
-                        help='number of epochs to train (default: 10)')
+                        help='number of epochs to train (default: 300)')
+    parser.add_argument('--epoch_itrs', type=int, default=50)
     parser.add_argument('--lr_S', type=float, default=0.1, metavar='LR',
                         help='learning rate (default: 0.1)')
     parser.add_argument('--lr_G', type=float, default=1e-3,
@@ -136,12 +135,10 @@ def main():
     parser.add_argument('--stu_ckpt', type=str, default=None)
     parser.add_argument('--log_interval', type=int, default=10, metavar='N',
                         help='how many batches to wait before logging training status')
-    parser.add_argument('--nz', type=int, default=256,
-                        help='how many batches to wait before logging training status')
+    parser.add_argument('--nz', type=int, default=256)
     parser.add_argument('--test_only', action='store_true', default=False)
     parser.add_argument('--download', action='store_true', default=False)
-    parser.add_argument('--step_size', type=int, default=100, metavar='S',
-                        help='random seed (default: 1)')
+    parser.add_argument('--step_size', type=int, default=100)
     parser.add_argument('--scheduler', action='store_true', default=False)
     parser.add_argument('--save_img', action='store_true', default=False)
 
