@@ -55,7 +55,7 @@ Download other datasets from the following links and extract them to *./data*:
 #### NYUv2
 
 1. Download [NYUv2](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html) and extract it to *./data/NYUv2*
-2. Download [labels](https://github.com/ankurhanda/nyuv2-meta-data) and extract it to *./data/NYUv2/nyuv2-meta-data*
+2. Download [labels](https://github.com/ankurhanda/nyuv2-meta-data) and extract them to *./data/NYUv2/nyuv2-meta-data*
 
 
 ### 2. Train teachers and students
