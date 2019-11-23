@@ -116,5 +116,3 @@ python train_teacher_seg.py --model deeplabv3_resnet50 --dataset nyuv2 --data_ro
 # Student
 python DFAD_nyu_deeplab.py --ckpt checkpoint/teacher/nyuv2-deeplabv3_resnet50.pt --data_root ./data/NYUv2 --scheduler
 ```
-
-
