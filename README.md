@@ -67,7 +67,7 @@ visdom -p 15550
 ```
 
 
-### CIFAR
+#### CIFAR
 
 * CIFAR10
 
