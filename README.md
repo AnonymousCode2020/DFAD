@@ -30,6 +30,9 @@ python DFAD_mnist.py --ckpt checkpoint/teacher/mnist-lenet5.pt # --verbose
 
 ## Step by Step
 
+### 0. Download Pretrained Models (optional)
+
+You can download **our pretrained models** from [OneDrive](https://1drv.ms/u/s!AoN4MhuSvGCfavIpQvNZgHdsy-M?e=qKyMdb) and extract the .pt files to *./checkpoint/teacher/*. 
 
 ### 1. Prepare Datasets
 
@@ -62,9 +65,6 @@ Start the visdom server at port 15550 for visualization
 ```bash
 visdom -p 15550
 ```
-
-You can download our pretrained models and extract them to *checkpoint/teacher*. 
-
 
 ### CIFAR
 
